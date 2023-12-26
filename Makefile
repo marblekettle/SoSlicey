@@ -8,7 +8,12 @@ all: .venv
 
 clean:
 #	pip freeze > req.txt
-	rm -rf .venv
 	find . -name __pycache__ | xargs rm -rf
 
-.phony: clean
+fclean: clean
+	rm -rf .venv
+	rm -rf instance
+
+re: clean all
+
+.phony: clean fclean
