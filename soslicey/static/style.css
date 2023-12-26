@@ -1,3 +1,14 @@
 * {
 	font-family: sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+.tab_bar {
+	display: flex;
+}
+.tab {
+	background-color: green;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
 }

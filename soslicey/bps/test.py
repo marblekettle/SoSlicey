@@ -1,7 +1,7 @@
-from flask import Blueprint, render_template
+from flask import Blueprint
 
 bp = Blueprint('test', __name__)
 
-@bp.route('/')
+@bp.route('/test')
 def test():
-	return render_template('base.html')
+	return '<h1>Test</h1>'

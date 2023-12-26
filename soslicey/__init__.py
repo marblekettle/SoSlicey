@@ -1,5 +1,5 @@
 from flask import Flask
-from .bps import test
+from .bps import bps
 import json
 
 def create_app(test_config=None):
@@ -8,5 +8,6 @@ def create_app(test_config=None):
 		app.config.from_file('config.json', load=json.load)
 	else:
 		app.config.from_mapping(test_config)
-	app.register_blueprint(test.bp)
+	for bp in bps:
+		app.register_blueprint(bp)
 	return app
