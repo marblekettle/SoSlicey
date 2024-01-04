@@ -1,5 +1,6 @@
 from flask import Flask
 from .bps import bps
+from .db import getDb
 import json
 
 def create_app(test_config=None):
